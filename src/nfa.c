@@ -28,7 +28,7 @@ void init_transitions(Transition **t) {
 
 Nfa *char_automaton(char c) {
     Nfa* nf = (Nfa *) malloc(sizeof(Nfa));
-    
+
     nf->start = (State *) malloc(sizeof(State));
     nf->final = (State *) malloc(sizeof(State));
 
@@ -85,7 +85,7 @@ Nfa *concat_automata(Nfa *n1, Nfa *n2) {
 
 Nfa *disjunct_automata(Nfa *n1, Nfa *n2) {
     Nfa *nf =(Nfa *) malloc(sizeof(Nfa));
-    
+
     nf->start = (State *) malloc(sizeof(State));
     nf->final = (State *) malloc(sizeof(State));
 
@@ -115,7 +115,7 @@ Nfa *disjunct_automata(Nfa *n1, Nfa *n2) {
 
     state_list[state_count] = nf->final;
     nf->final->id = state_count++;
-    
+
     return nf;
 }
 

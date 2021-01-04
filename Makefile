@@ -44,7 +44,7 @@ $(OBJ_PATH)/%.o: $(SRC_PATH)/%.c*
 $(DBG_PATH)/%.o: $(SRC_PATH)/%.c*
 	$(CC) $(CCOBJFLAG) $(DBGFLAG) -o $@ $<
 
-$(TARGET_DEBUG): $(OBJ_DEBUG)
+$(TARGET_DEBUG): $(OBJ_DEBUG) $(MAIN_SRC)
 	$(CC) $(CCFLAG) $(DBGFLAG) $? -o $@
 
 # phony rules

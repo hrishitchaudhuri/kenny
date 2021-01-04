@@ -20,7 +20,7 @@ int input_prec(char ch) {
 
         case '.':
             return 3;
-        
+
         case '*':
             return 5;
 
@@ -29,7 +29,7 @@ int input_prec(char ch) {
 
         case '(':
             return 9;
-    
+
         default:
             return 7;
     }
@@ -51,14 +51,14 @@ int stack_prec(char ch) {
 
         case '(':
             return 0;
-    
+
         default:
             return 8;
     }
 }
 
 void convert_postfix(char *s, char *t) {
-    char ch, stack[10]; 
+    char ch, stack[10];
     int head = -1, i = 0, j = 0;
 
     push(stack, &head, '#');

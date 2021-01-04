@@ -9,7 +9,7 @@ typedef struct State {
 
 typedef struct Transition {
     char sig;
-    State *next;   
+    State *next;
 } Transition;
 
 typedef struct Automaton {
