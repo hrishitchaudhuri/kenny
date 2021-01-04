@@ -34,7 +34,7 @@ Once you have the binary executable all set up in your `bin` folder, it's time t
 [IN]: 
 ```
 Enter your favourite regular expression into this. **Concatenation MUST be represented by '.', disjunction MUST be represented by '+', and Kleene closure MUST be represented by '\*'.**  
-Thus, for example, to denote the regex ab+(a+b)\*, it must be represented as a.b+(a+b)\*. Also note that outside brackets, the operator precedence followed is **\* > + > . **.
+Thus, for example, to denote the regex ab+(a+b)\*, it must be represented as a.b+(a+b)\*. Also note that outside brackets, the operator precedence followed is __\* > + > .__.
 
 The above regex outputs the following NFA:
 ```
@@ -63,6 +63,6 @@ The first line of the output is a postfix expression denoting the same regular e
 ```
 0 -- a <==> 1 : On state 0, an input 'a' transits to state 1
 ```
-States denoted by a `*` are final states.
+States denoted by a `*` are final states. Also note that using 'e' as a character in the regex should be avoided at all costs since kenny uses 'e' to denote the lambda-transitions of a state.
 
 NOTE: Thompson's construction does not provide the absolute minimal NFA. 
