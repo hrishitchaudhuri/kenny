@@ -35,7 +35,7 @@ CLEAN_LIST := $(TARGET) \
 default: all
 
 # non-phony targets
-$(TARGET): $(OBJ)
+$(TARGET): $(OBJ) $(MAIN_SRC)
 	$(CC) $(CCFLAG) -o $@ $?
 
 $(OBJ_PATH)/%.o: $(SRC_PATH)/%.c*

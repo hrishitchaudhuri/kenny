@@ -210,4 +210,5 @@ void display_nfa(Nfa *nf) {
             if (state_list[i]->transitions[1]->next->final) printf("*");
         }
     }
+    printf("\n");
 }
